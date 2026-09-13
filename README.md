@@ -26,8 +26,7 @@ process. This project automates that workflow with:
 
 ## Demo
 
-![Demo image of section-1 (File-wise analysis)](assets/Screenshot 2026-09-13 at 22.22.47.png)
-![Demo image of section-2 (Sensor-wise analysis)(assets/Screenshot 2026-09-13 at 22.23.03.png)
+![Demo image of section-1 (File-wise analysis)](assets/Demo_section-1.png) ![Demo image of section-2 (Sensor-wise analysis)](assets/Demo_section-2.png)
 
 ## Repository structure
 
