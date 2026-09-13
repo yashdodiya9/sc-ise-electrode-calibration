@@ -25,7 +25,7 @@ process. This project automates that workflow with:
   drift/stability over time.
 
 ## Demo
-
+This is how the Streamlit dashboard looks like.
 ![Demo image of section-1 (File-wise analysis)](assets/Demo_section-1.png) ![Demo image of section-2 (Sensor-wise analysis)](assets/Demo_section-2.png)
 
 ## Repository structure
