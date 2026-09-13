@@ -59,9 +59,6 @@ process. This project automates that workflow with:
 └── README.md
 ```
 
-> This is a suggested layout — see the accompanying chat message for the
-> mapping from the original ZIP's folders to this structure.
-
 ## Installation
 
 ```bash
