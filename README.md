@@ -26,8 +26,8 @@ process. This project automates that workflow with:
 
 ## Demo
 
-> TODO: add a screenshot or short GIF of the Streamlit app here
-> (`streamlit run app/app.py`, then screenshot the calibration-curve tab).
+![Demo image of section-1 (File-wise analysis)](assets/Screenshot 2026-09-13 at 22.22.47.png)
+![Demo image of section-2 (Sensor-wise analysis)(assets/Screenshot 2026-09-13 at 22.23.03.png)
 
 ## Repository structure
 
