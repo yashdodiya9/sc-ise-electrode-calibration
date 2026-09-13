@@ -1,0 +1,21 @@
+# Core app
+streamlit==1.59.2
+
+# Data handling
+pandas==2.3.3
+numpy==1.26.4
+openpyxl==3.1.5      # required by pandas to read/write .xlsx
+
+# Analysis / stats
+scipy==1.16.3
+
+# Plotting
+plotly==6.5.0         # used by the Streamlit app (app4.py, plots4.py)
+matplotlib==3.10.8    # used in the notebooks (model.ipynb, sensor_configuration.ipynb, WLT notebook)
+
+# Machine learning (model.ipynb)
+scikit-learn==1.8.0
+joblib==1.5.2          # scikit-learn dependency, pinned explicitly since it's imported directly
+
+# Notebook execution (only needed to run the .ipynb files, not the app)
+ipykernel==7.1.0
