@@ -115,5 +115,3 @@ Developed during the NDnano Undergraduate Research Fellowship (NURF),
 Department of Chemical & Biomolecular Engineering, University of Notre
 Dame, under Prof. Jennifer L. Schaefer and Prof. Nosang V. Myung, with
 Raúl S. Chávez Ramírez and Govinda P. Devkota.
-
-## License
