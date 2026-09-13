@@ -77,9 +77,9 @@ Then, in the browser UI:
 3. Review/adjust auto-detected concentration-switch times.
 4. Get calibration curves (slope, intercept, R², LOD) per electrode, and download the cleaned data / curves.
 
-You can also use the app :
+You can also use the app : [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sc-ise-electrode-calibration.streamlit.app/) OR
 https://sc-ise-electrode-calibration.streamlit.app/
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sc-ise-electrode-calibration.streamlit.app/)
+
 ## Data
 
 - **Source**: raw OCP (open-circuit potential) traces from CaCl₂ calibration
