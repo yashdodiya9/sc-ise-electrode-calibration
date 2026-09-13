@@ -2,22 +2,20 @@
 
 Automated processing, analysis, and ML-based concentration prediction for
 solid-contact ion-selective electrode (SC-ISE) calibration data, built during
-a Notre Dame NDnano Undergraduate Research Fellowship (NURF).
-
-> Replace this tagline / add a project logo or banner if you have one.
+a NDnano Undergraduate Research Fellowship (NURF) program at University of Notre Dame.
 
 ## Overview
 
 Solid-contact ion-selective electrodes (SC-ISEs) are used for real-time,
 low-cost water-quality monitoring, but converting raw sensor potential into
 an ion concentration requires calibrating each electrode (estimating slope,
-intercept, and linear range) — normally a manual, repetitive, per-electrode
+intercept, and linear range) i.e. normally a manual, repetitive, per-electrode
 process. This project automates that workflow with:
 
 - **An interactive Streamlit app** that ingests raw multi-electrode
   potentiostat exports (.xlsx/.csv), cleans and reorganizes them,
   auto-detects concentration-switch times, and produces calibration curves
-  (slope, intercept, R²) per electrode — no manual curve-picking.
+  (slope, intercept, R²) per electrode i.e. no manual curve-picking.
 - **A machine-learning pipeline** that engineers 16 features per
   concentration window (absolute-potential statistics + response-shape
   statistics + inter-step deltas) from 5 calibration runs / 44 electrodes
@@ -38,7 +36,7 @@ process. This project automates that workflow with:
 ├── app/                     # Streamlit application
 │   ├── app.py                #  UI layer (upload, clean, detect steps, calibrate)
 │   └── tools/
-│       ├── ocp_tools.py       #  pure data-processing logic (no Streamlit) — unit-testable
+│       ├── ocp_tools.py       #  pure data-processing logic (no Streamlit)
 │       └── plots.py           #  Plotly figure builders
 ├── data/
 │   ├── raw/                  # original potentiostat exports (.xlsx / .csv)
@@ -62,8 +60,8 @@ process. This project automates that workflow with:
 ## Installation
 
 ```bash
-git clone <your-repo-url>
-cd <repo-name>
+git clone https://github.com/yashdodiya9/sc-ise-electrode-calibration
+cd sc-ise-electrode-calibration
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
@@ -71,15 +69,14 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
-streamlit run app/app.py
+streamlit run app.py
 ```
 
 Then, in the browser UI:
 1. Upload a raw `.xlsx`/`.csv` potentiostat export.
-2. Pick the time column and the electrode (signal) columns.
+2. Pick the time column and the electrode (signal) columns and do the necessary preprocessing.
 3. Review/adjust auto-detected concentration-switch times.
-4. Get calibration curves (slope, intercept, R², LOD) per electrode, and
-   download the cleaned data / curves.
+4. Get calibration curves (slope, intercept, R², LOD) per electrode, and download the cleaned data / curves.
 
 ## Data
 
@@ -92,12 +89,7 @@ Then, in the browser UI:
   feature extraction → `data/processed/features_dataset.csv`
   (573 rows = one concentration window × one electrode, 16 features each).
 
-> **Before publishing the raw data publicly**, confirm with your PI/lab that
-> sharing it in an open repository is OK — university research data can be
-> subject to lab or funding-source data-sharing policies even when the code
-> itself is yours to share.
-
-## Methodology / results
+## ML - results
 
 Six regressors (Ridge, kNN, SVR-RBF, Random Forest, Extra Trees,
 HistGradientBoosting) were compared predicting log-concentration from the
@@ -113,12 +105,9 @@ Best result (Extra Trees, held-out electrode / held-out run):
 | Electrode      | ExtraTrees | 0.938 | 0.280        | 0.477          |
 | Calibration run| ExtraTrees | 0.875 | 0.475        | 0.679          |
 
-> Pulled directly from `notebooks/03_model.ipynb` — update if you retrain.
-
 ## Tech stack
 
-Python · Streamlit · pandas · NumPy · SciPy · Plotly · Matplotlib ·
-scikit-learn
+Python, Streamlit, pandas, NumPy, SciPy, Plotly, Matplotlib, scikit-learn
 
 ## Acknowledgments
 
@@ -128,10 +117,3 @@ Dame, under Prof. Jennifer L. Schaefer and Prof. Nosang V. Myung, with
 Raúl S. Chávez Ramírez and Govinda P. Devkota.
 
 ## License
-
-> TODO: add a LICENSE file (e.g. MIT) — see the accompanying chat message
-> for what to consider before choosing one.
-
-## Contact
-
-> TODO: your name, email/LinkedIn, GitHub.
